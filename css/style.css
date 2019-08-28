@@ -1,0 +1,102 @@
+@charset "utf-8";
+body {
+	background-color: #ddd;
+	font-family: sans-serif;
+	margin:0;
+}
+#mask {
+	background: black;
+	display:none;
+	width:100%;
+	opacity: 0.5;
+	position:fixed;
+}
+#mask:hover {
+	cursor: pointer;
+}
+#wrapper {
+	width: 700px;
+	margin: auto;
+	background-color: #04857e;
+	color:white;
+	padding:5px 10px;
+}
+#wrapper h3 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.person {
+	width:350px;
+	margin:10px auto;
+	background-color:white;
+	padding: 0 15px 0px 0px;
+	height:72px;
+	color: black;
+}
+.person:hover {
+	color: #04857e;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+}
+.person h4 {
+	text-transform: uppercase;
+	padding:30px 0 0 0;
+	text-align: right;
+}
+.person img {
+	float:left;
+}
+
+#fullPerson {
+	width:535px;
+	padding-right: 15px;
+	background: white;
+	height:128px;
+	position:fixed;
+	left:200px;
+	font-size:12px;
+	text-align: right;
+}
+#fullPerson img {
+	float: left;
+}
+#fullPerson h4 {
+	text-transform: uppercase;
+	margin: 10px 0;
+}
+#fullPerson .adress {
+	text-align:left;
+	margin-left:10px;
+	float:left;
+}
+#fullPerson .gender {
+	text-align: left;
+	float: left;
+	margin:10px 0 0 10px;
+}
+#fullPerson .contacts {
+	margin-top: 12px;
+}
+#fullPerson hr {
+	margin-bottom:0px;
+}
+.buttonMenu {
+	text-align: center;
+}
+input[type=button] {
+	width:150px;
+	margin:0 10px;
+	text-transform: uppercase;
+	font-size:12px;
+	padding:10px 0;
+	background: white;
+	border:none;
+
+}
+input[type=button]:hover {
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: underline;
+}
