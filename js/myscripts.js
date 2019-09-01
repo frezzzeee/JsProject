@@ -1,5 +1,7 @@
 	//Ждем загрузки страницы
 
+	"use strict";
+
 	window.onload = function() { 
 
 		//Создаём новый объект XMLHttpRequest
@@ -16,8 +18,8 @@
 
 			//Парсинг json и создание массива пользователей
 
-	    	let arr = JSON.parse (xhr.responseText);
-	    	let array = arr.results;
+	    	let array = JSON.parse (xhr.responseText).results;
+	    	//let array = arr.results;
 
 	    	//Выборка необходимых элементов DOM
 
@@ -59,14 +61,9 @@
 
 	    	function out(setCompare) {
 
-	    		//Условие с переданным параметром setCompare для выбора вида сортировки
+	    		//Сортировка массива
 
-	    		if(setCompare == compare){
-					array.sort(compare);
-				}
-				else if (setCompare == compareReverse) {
-					array.sort(compareReverse);
-				};
+	    		array.sort(setCompare);
 
 				//Перебор всех элементов массива
 
@@ -123,8 +120,8 @@
 			//Функция удаление списка элементов
 
 			function deleteElements() {
-				let nodelist = document.getElementsByClassName('person');
-				let list = Array.prototype.slice.call(nodelist);
+				let HTMLCol = document.getElementsByClassName('person');
+				let list = Array.prototype.slice.call(HTMLCol);
 				for(let i = 0; i < list.length; i++){
 					list[i].remove();
 				}
